@@ -1,6 +1,6 @@
 package SolvingProblems.week2.AllGeneInDna;
 
-public class part1 {
+public class AssignmentOne {
     public static void main(String[] args) {
         test();   
     }

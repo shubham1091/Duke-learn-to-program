@@ -8,7 +8,7 @@ import org.apache.commons.csv.CSVRecord;
 import edu.duke.DirectoryResource;
 import edu.duke.FileResource;
 
-public class CSV {
+public class CSVmax {
     public static void main(String[] args) {
         testHottestInManyDays();
     }

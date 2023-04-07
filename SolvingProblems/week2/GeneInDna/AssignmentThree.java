@@ -1,6 +1,6 @@
 package SolvingProblems.week2.GeneInDna;
 
-public class part3 {
+public class AssignmentThree {
     public boolean twoOccurrences(String a, String b) {
         int length = a.length();
         int first = b.indexOf(a);

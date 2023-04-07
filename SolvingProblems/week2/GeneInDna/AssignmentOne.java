@@ -1,6 +1,6 @@
 package SolvingProblems.week2.GeneInDna;
 
-public class part1 {
+public class AssignmentOne {
     public String findSimpleGene(String dna) {
         int start = dna.indexOf("ATG");
         if (start == -1) {

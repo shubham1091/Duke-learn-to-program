@@ -5,7 +5,7 @@ import org.apache.commons.csv.CSVRecord;
 
 import edu.duke.FileResource;
 
-public class Assignment_one {
+public class AssignmentOne {
     public static void main(String[] args) {
         FileResource fr = new FileResource();
         CSVParser parser = fr.getCSVParser();

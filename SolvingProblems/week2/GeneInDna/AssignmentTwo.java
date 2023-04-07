@@ -1,6 +1,6 @@
 package SolvingProblems.week2.GeneInDna;
 
-public class part2 {
+public class AssignmentTwo {
     public String findSimpleGene(String dna, String startcodon, String stopcodon) {
         String newdna = dna.toLowerCase();
         int start = newdna.indexOf(startcodon);

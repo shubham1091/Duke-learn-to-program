@@ -8,7 +8,7 @@ import java.nio.file.Paths;
 import edu.duke.FileResource;
 import edu.duke.StorageResource;
 
-public class part1 {
+public class AssignmentOne {
     public static void main(String[] args) {
         // System.out.println(cgRatio("ATTCTATCGACCCTAATTCTTCCACTCACCCCAACCCTCTCCATTCTGGA"));
         // System.out.println(countCTG("CTGCTGCTGCTGCTG"));

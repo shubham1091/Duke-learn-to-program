@@ -2,7 +2,7 @@ package SolvingProblems.week2.GeneInDna;
 
 import edu.duke.*;
 
-public class part4 {
+public class AssignmentFour {
     public static void main(String[] args) {
         testing();
     }
