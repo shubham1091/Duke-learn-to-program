@@ -69,7 +69,7 @@ public class QuakeEntry implements Comparable<QuakeEntry> {
 
 	/**
 	 * Compares this QuakeEntry with the specified QuakeEntry for order based on
-	 * their locations.
+	 * their magnitude.
 	 * 
 	 * @param loc the QuakeEntry to compare to
 	 * @return a negative integer, zero, or a positive integer as this QuakeEntry is
@@ -78,22 +78,27 @@ public class QuakeEntry implements Comparable<QuakeEntry> {
 	 */
 	@Override
 	public int compareTo(QuakeEntry loc) {
-		double difflat = myLocation.getLatitude() - loc.myLocation.getLatitude();
-		if (Math.abs(difflat) < 0.001) {
-			double diff = myLocation.getLongitude() - loc.myLocation.getLongitude();
-			if (diff < 0)
-				return -1;
-			if (diff > 0)
-				return 1;
-			return 0;
+		int mg = Double.compare(magnitude, loc.magnitude);
+		if(mg==0){
+			return Double.compare(depth, loc.depth);
 		}
-		if (difflat < 0)
-			return -1;
-		if (difflat > 0)
-			return 1;
+		return mg;
+		// double difflat = myLocation.getLatitude() - loc.myLocation.getLatitude();
+		// if (Math.abs(difflat) < 0.001) {
+		// 	double diff = myLocation.getLongitude() - loc.myLocation.getLongitude();
+		// 	if (diff < 0)
+		// 		return -1;
+		// 	if (diff > 0)
+		// 		return 1;
+		// 	return 0;
+		// }
+		// if (difflat < 0)
+		// 	return -1;
+		// if (difflat > 0)
+		// 	return 1;
 
-		// never reached
-		return 0;
+		// // never reached
+		// return 0;
 	}
 
 	/**
