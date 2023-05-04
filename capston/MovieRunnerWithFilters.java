@@ -23,8 +23,8 @@ public class MovieRunnerWithFilters {
      */
     public void printAverageRatings() {
         int minimalRaters = 35;
-        ThirdRatings sr = new ThirdRatings("data/capston/ratings.csv");
-        MovieDatabase.initialize("capston/ratedmoviesfull.csv");
+        ThirdRatings sr = new ThirdRatings("capston/data/ratings.csv");
+        MovieDatabase.initialize("ratedmoviesfull.csv");
         System.out.println("Number of Raters: " + sr.getRaterSize());
         System.out.println("Number of Movies: " + MovieDatabase.size());
 
@@ -40,8 +40,8 @@ public class MovieRunnerWithFilters {
     }
 
     public void printAverageRatingsByYear() {
-        ThirdRatings thirdRatings = new ThirdRatings("data/capston/ratings.csv");
-        MovieDatabase.initialize("capston/ratedmoviesfull.csv");
+        ThirdRatings thirdRatings = new ThirdRatings("capston/data/ratings.csv");
+        MovieDatabase.initialize("ratedmoviesfull.csv");
 
         System.out.println("Read data for " + thirdRatings.getRaterSize() + " raters");
 
@@ -68,8 +68,8 @@ public class MovieRunnerWithFilters {
     }
 
     public void printAverageRatingsByGenre() {
-        ThirdRatings thirdRatings = new ThirdRatings("data/capston/ratings.csv");
-        MovieDatabase.initialize("capston/ratedmoviesfull.csv");
+        ThirdRatings thirdRatings = new ThirdRatings("capston/data/ratings.csv");
+        MovieDatabase.initialize("ratedmoviesfull.csv");
 
         int minimalRaters = 20;
         String genre = "Comedy";
@@ -95,8 +95,8 @@ public class MovieRunnerWithFilters {
         int maxMinutes = 135;
         int minimalRaters = 5;
 
-        ThirdRatings thirdRatings = new ThirdRatings("data/capston/ratings.csv");
-        MovieDatabase.initialize("capston/ratedmoviesfull.csv");
+        ThirdRatings thirdRatings = new ThirdRatings("capston/data/ratings.csv");
+        MovieDatabase.initialize("ratedmoviesfull.csv");
         MinutesFilter filter = new MinutesFilter(minMinutes, maxMinutes);
 
         ArrayList<Rating> ratings = thirdRatings.getAverageRatingsByFilter(minimalRaters, filter);
@@ -117,8 +117,8 @@ public class MovieRunnerWithFilters {
     }
 
     public void printAverageRatingsByDirectors() {
-        ThirdRatings thirdRatings = new ThirdRatings("data/capston/ratings.csv");
-        MovieDatabase.initialize("capston/ratedmoviesfull.csv");
+        ThirdRatings thirdRatings = new ThirdRatings("capston/data/ratings.csv");
+        MovieDatabase.initialize("ratedmoviesfull.csv");
 
         System.out.println("read data for " + thirdRatings.getRaterSize() + " raters");
         System.out.println("read data for " + MovieDatabase.size() + " movies");
@@ -146,8 +146,8 @@ public class MovieRunnerWithFilters {
         int yearAfter = 1990;
         String genre = "Drama";
 
-        ThirdRatings thirdRatings = new ThirdRatings("data/capston/ratings.csv");
-        MovieDatabase.initialize("capston/ratedmoviesfull.csv");
+        ThirdRatings thirdRatings = new ThirdRatings("capston/data/ratings.csv");
+        MovieDatabase.initialize("ratedmoviesfull.csv");
 
         System.out.println("read data for " + thirdRatings.getRaterSize() + " raters");
         System.out.println("read data for " + MovieDatabase.size() + " movies");
@@ -175,8 +175,8 @@ public class MovieRunnerWithFilters {
 
     public void printAverageRatingsByDirectorsAndMinutes() {
 
-        ThirdRatings thirdRatings = new ThirdRatings("data/capston/ratings.csv");
-        MovieDatabase.initialize("capston/ratedmoviesfull.csv");
+        ThirdRatings thirdRatings = new ThirdRatings("capston/data/ratings.csv");
+        MovieDatabase.initialize("ratedmoviesfull.csv");
 
         System.out.println("read data for " + thirdRatings.getRaterSize() + " raters");
         System.out.println("read data for " + MovieDatabase.size() + " movies");

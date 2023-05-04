@@ -19,7 +19,7 @@ public class SecondRatings {
      */
     public SecondRatings() {
         // default constructor
-        this("data/capston/ratedmoviesfull.csv", "data/capston/ratings.csv");
+        this("capston/data/ratedmoviesfull.csv", "capston/data/ratings.csv");
         // this("data/capston/ratedmovies_short.csv", "data/capston/ratings_short.csv");
     }
 

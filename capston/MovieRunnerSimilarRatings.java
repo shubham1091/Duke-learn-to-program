@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 public class MovieRunnerSimilarRatings {
 
-    private static final String RATING_FILENAME = "capston/ratings.csv";
-    private static final String MOVIE_FILENAME = "capston/ratedmoviesfull.csv";
+    private static final String RATING_FILENAME = "ratings.csv";
+    private static final String MOVIE_FILENAME = "ratedmoviesfull.csv";
 
     public static void main(String[] args) {
         MovieRunnerSimilarRatings runner = new MovieRunnerSimilarRatings();
@@ -20,7 +20,7 @@ public class MovieRunnerSimilarRatings {
 
     public void printAverageRatings() {
         int minNumOfRatings = 35;
-        
+
         FourthRatings fr = new FourthRatings();
         RaterDatabase.initialize(RATING_FILENAME);
         MovieDatabase.initialize(MOVIE_FILENAME);
@@ -76,21 +76,22 @@ public class MovieRunnerSimilarRatings {
         MovieDatabase.initialize(MOVIE_FILENAME);
         System.out.println("read data for " + RaterDatabase.size() + " raters");
         System.out.println("read data for " + MovieDatabase.size() + " movies");
-    
+
         ArrayList<Rating> similarRatings = fr.getSimilarRatings(raterID, numSimilarRaters, minimalRaters);
         if (similarRatings.isEmpty()) {
             System.out.println("No movies found that meet the criteria.");
             return;
         }
-    
+
         // Sort by rating value in descending order
         similarRatings.sort((r1, r2) -> Double.compare(r2.getValue(), r1.getValue()));
-    
+
         // Print the top rated movie
         Rating topRatedMovie = similarRatings.get(0);
-        System.out.println("The movie returned with the top rated average is: " + MovieDatabase.getTitle(topRatedMovie.getItem()));
+        System.out.println(
+                "The movie returned with the top rated average is: " + MovieDatabase.getTitle(topRatedMovie.getItem()));
     }
-    
+
     public void printSimilarRatingsByGenre() {
         String raterID = "964";
         int minimalRaters = 5;
@@ -102,24 +103,26 @@ public class MovieRunnerSimilarRatings {
         MovieDatabase.initialize(MOVIE_FILENAME);
         System.out.println("read data for " + RaterDatabase.size() + " raters");
         System.out.println("read data for " + MovieDatabase.size() + " movies");
-    
+
         Filter genreFilter = new GenreFilter(genre);
-        ArrayList<Rating> similarRatings = fr.getSimilarRatingsByFilter(raterID, numSimilarRaters, minimalRaters, genreFilter);
-    
+        ArrayList<Rating> similarRatings = fr.getSimilarRatingsByFilter(raterID, numSimilarRaters, minimalRaters,
+                genreFilter);
+
         if (similarRatings.isEmpty()) {
             System.out.println("No movies found that meet the criteria.");
             return;
         }
-    
+
         // Sort by rating value in descending order
         similarRatings.sort((r1, r2) -> Double.compare(r2.getValue(), r1.getValue()));
-    
+
         // Print the top rated movie
         Rating topRatedMovie = similarRatings.get(0);
-        System.out.println("The movie returned with the top rated average is: " + MovieDatabase.getTitle(topRatedMovie.getItem()));
-    
+        System.out.println(
+                "The movie returned with the top rated average is: " + MovieDatabase.getTitle(topRatedMovie.getItem()));
+
     }
-    
+
     public void printSimilarRatingsByDirector() {
         String raterID = "120";
         int minimalRaters = 2;
@@ -131,24 +134,26 @@ public class MovieRunnerSimilarRatings {
         MovieDatabase.initialize(MOVIE_FILENAME);
         System.out.println("read data for " + RaterDatabase.size() + " raters");
         System.out.println("read data for " + MovieDatabase.size() + " movies");
-    
+
         Filter directorFilter = new DirectorsFilter(directors);
-        ArrayList<Rating> similarRatings = fr.getSimilarRatingsByFilter(raterID, numSimilarRaters, minimalRaters, directorFilter);
-    
+        ArrayList<Rating> similarRatings = fr.getSimilarRatingsByFilter(raterID, numSimilarRaters, minimalRaters,
+                directorFilter);
+
         if (similarRatings.isEmpty()) {
             System.out.println("No movies found that meet the criteria.");
             return;
         }
-    
+
         // Sort by rating value in descending order
         similarRatings.sort((r1, r2) -> Double.compare(r2.getValue(), r1.getValue()));
-    
+
         // Print the top rated movie
         Rating topRatedMovie = similarRatings.get(0);
-        System.out.println("The movie returned with the top rated average is: " + MovieDatabase.getTitle(topRatedMovie.getItem()));
-    
+        System.out.println(
+                "The movie returned with the top rated average is: " + MovieDatabase.getTitle(topRatedMovie.getItem()));
+
     }
-    
+
     public void printSimilarRatingsByGenreAndMinutes() {
         String raterID = "168";
         int minimalRaters = 3;
@@ -162,26 +167,28 @@ public class MovieRunnerSimilarRatings {
         MovieDatabase.initialize(MOVIE_FILENAME);
         System.out.println("read data for " + RaterDatabase.size() + " raters");
         System.out.println("read data for " + MovieDatabase.size() + " movies");
-    
+
         AllFilters filters = new AllFilters();
         filters.addFilter(new GenreFilter(genre));
         filters.addFilter(new MinutesFilter(minMinutes, maxMinutes));
-    
-        ArrayList<Rating> similarRatings = fr.getSimilarRatingsByFilter(raterID, numSimilarRaters, minimalRaters, filters);
-    
+
+        ArrayList<Rating> similarRatings = fr.getSimilarRatingsByFilter(raterID, numSimilarRaters, minimalRaters,
+                filters);
+
         if (similarRatings.isEmpty()) {
             System.out.println("No movies found that meet the criteria.");
             return;
         }
-    
+
         // Sort by rating value in descending order
         similarRatings.sort((r1, r2) -> Double.compare(r2.getValue(), r1.getValue()));
-    
+
         // Print the top rated movie
         Rating topRatedMovie = similarRatings.get(0);
-        System.out.println("The movie returned with the top rated average is: " + MovieDatabase.getTitle(topRatedMovie.getItem()));
+        System.out.println(
+                "The movie returned with the top rated average is: " + MovieDatabase.getTitle(topRatedMovie.getItem()));
     }
-    
+
     public void printSimilarRatingsByYearAfterAndMinutes() {
         String raterID = "314";
         int minimalRaters = 5;
@@ -195,25 +202,27 @@ public class MovieRunnerSimilarRatings {
         MovieDatabase.initialize(MOVIE_FILENAME);
         System.out.println("read data for " + RaterDatabase.size() + " raters");
         System.out.println("read data for " + MovieDatabase.size() + " movies");
-    
+
         AllFilters allFilters = new AllFilters();
         allFilters.addFilter(new YearAfterFilter(yearAfter));
         allFilters.addFilter(new MinutesFilter(minMinutes, maxMinutes));
-    
-        ArrayList<Rating> similarRatings = fr.getSimilarRatingsByFilter(raterID, numSimilarRaters, minimalRaters, allFilters);
-    
+
+        ArrayList<Rating> similarRatings = fr.getSimilarRatingsByFilter(raterID, numSimilarRaters, minimalRaters,
+                allFilters);
+
         if (similarRatings.isEmpty()) {
             System.out.println("No movies found that meet the criteria.");
             return;
         }
-    
+
         // Sort by rating value in descending order
         similarRatings.sort((r1, r2) -> Double.compare(r2.getValue(), r1.getValue()));
-    
+
         // Print the top rated movie
         Rating topRatedMovie = similarRatings.get(0);
-        System.out.println("The movie returned with the top rated average is: " + MovieDatabase.getTitle(topRatedMovie.getItem()));
-    
+        System.out.println(
+                "The movie returned with the top rated average is: " + MovieDatabase.getTitle(topRatedMovie.getItem()));
+
     }
-    
+
 }

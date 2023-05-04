@@ -19,7 +19,7 @@ public class ThirdRatings {
      */
     public ThirdRatings() {
         // default constructor
-        this("data/capston/ratings.csv");
+        this("capston/data/ratings.csv");
         // this( "data/capston/ratings_short.csv");
     }
 

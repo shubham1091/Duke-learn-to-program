@@ -10,7 +10,7 @@ public class FirstRatings {
      * A method to test the loadRatings and its helper methods.
      */
     public void testLoadRatings() {
-        ArrayList<EfficientRater> ratings = loadRaters("data/capston/ratings.csv");
+        ArrayList<EfficientRater> ratings = loadRaters("capston/data/ratings.csv");
         System.out.println(ratings.size());
         String rt_id = "193";
         System.out.println("Number of rating by " + rt_id + " is " + countRating(ratings, rt_id));
@@ -24,7 +24,7 @@ public class FirstRatings {
      * A method to test the loadMovies and its helper methods.
      */
     public void testLoadMovies() {
-        ArrayList<Movie> movies = loadMovies("data/capston/ratedmoviesfull.csv");
+        ArrayList<Movie> movies = loadMovies("capston/data/ratedmoviesfull.csv");
         System.out.println("size of array list " + movies.size());
         String gener = "Comedy";
         System.out.println("Number of movie by " + gener + " as gener is " + numType(movies, gener));

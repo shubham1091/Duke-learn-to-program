@@ -17,7 +17,7 @@ public class RaterDatabase {
     public static void initialize(String filename) {
         if (ourRaters == null) {
             ourRaters = new HashMap<String, Rater>();
-            addRatings("data/" + filename);
+            addRatings("capston/data/" + filename);
         }
     }
 
