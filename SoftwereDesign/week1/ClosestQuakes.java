@@ -14,7 +14,7 @@ public class ClosestQuakes {
     public void findClosestQuakes() {
         // String source
         // ="http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.atom";
-        String source = "data/EarthQuake/nov20quakedatasmall.atom";
+        String source = "SoftwereDesign/data/Earthquake/nov20quakedatasmall.atom";
         Location city = new Location(-6.211, 106.845);
 
         EarthQuakeParser parser = new EarthQuakeParser();

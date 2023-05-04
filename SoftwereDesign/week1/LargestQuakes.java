@@ -18,8 +18,8 @@ public class LargestQuakes {
      */
     public void findLargestQuakes() {
         EarthQuakeParser parser = new EarthQuakeParser();
-        // String source = "data/EarthQuake/nov20quakedatasmall.atom";
-        String source = "data/EarthQuake/nov20quakedata.atom";
+        // String source = "SoftwereDesign/data/EarthQuake/nov20quakedatasmall.atom";
+        String source = "SoftwereDesign/data/EarthQuake/nov20quakedata.atom";
         int howMany = 50;
 
         ArrayList<QuakeEntry> list = parser.read(source);

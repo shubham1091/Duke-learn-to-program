@@ -15,8 +15,8 @@ public class EarthQuakeClient2 {
         EarthQuakeParser parser = new EarthQuakeParser();
         // String source =
         // "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.atom";
-        // String source = "data/Earthquake/nov20quakedatasmall.atom";
-        String source = "data/Earthquake/nov20quakedata.atom";
+        // String source = "SoftwereDesign/data/Earthquake/nov20quakedatasmall.atom";
+        String source = "SoftwereDesign/data/Earthquake/nov20quakedata.atom";
         ArrayList<QuakeEntry> list = parser.read(source);
         System.out.println("read data for " + list.size() + " quakes");
 
@@ -37,8 +37,8 @@ public class EarthQuakeClient2 {
      * criteria.
      */
     public void quakesWithFilter2() {
-        // String source = "data/Earthquake/nov20quakedatasmall.atom";
-        String source = "data/Earthquake/nov20quakedata.atom";
+        // String source = "SoftwereDesign/data/Earthquake/nov20quakedatasmall.atom";
+        String source = "SoftwereDesign/data/Earthquake/nov20quakedata.atom";
         Location city = new Location(39.7392, -104.9903);
         String where = "end", phrase = "a";
 
@@ -65,8 +65,8 @@ public class EarthQuakeClient2 {
      * Prints out the filtered earthquakes and the filters used to filter them.
      */
     public void testMatchAllFilter() {
-        // String source = "data/Earthquake/nov20quakedatasmall.atom";
-        String source = "data/Earthquake/nov20quakedata.atom";
+        // String source = "SoftwereDesign/data/Earthquake/nov20quakedatasmall.atom";
+        String source = "SoftwereDesign/data/Earthquake/nov20quakedata.atom";
         String where = "any", phrase = "a";
         double minmg = 1.0, maxmg = 4.0;
         double mindp = -180_000.0, maxdp = -30_000.0;
@@ -94,8 +94,8 @@ public class EarthQuakeClient2 {
      * Prints out the filtered earthquakes and the filters used to filter them.
      */
     public void testMatchAllFilter2() {
-        // String source = "data/Earthquake/nov20quakedatasmall.atom";
-        String source = "data/Earthquake/nov20quakedata.atom";
+        // String source = "SoftwereDesign/data/Earthquake/nov20quakedatasmall.atom";
+        String source = "SoftwereDesign/data/Earthquake/nov20quakedata.atom";
         Location city = new Location(55.7308, 9.1153);
         String phrase = "e", where = "any";
         double minMag = 0.0, maxMag = 5.0;
@@ -139,8 +139,8 @@ public class EarthQuakeClient2 {
      * Creates a CSV file containing the earthquake data.
      */
     public void createCSV() {
-        // String source = data/Earthquake/nov20quakedata.atom";
-        String source = "data/Earthquake/nov20quakedatasmall.atom";
+        // String source = "SoftwereDesign/data/Earthquake/nov20quakedata.atom";
+        String source = "SoftwereDesign/data/Earthquake/nov20quakedatasmall.atom";
         // String source =
         // "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.atom";
 

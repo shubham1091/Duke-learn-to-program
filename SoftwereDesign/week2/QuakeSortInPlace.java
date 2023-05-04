@@ -26,8 +26,8 @@ public class QuakeSortInPlace {
      */
     public void testSort() {
         EarthQuakeParser parser = new EarthQuakeParser();
-        // String source = "data/Earthquake/earthquakeDataSampleSix1.atom";
-        String source = "data/Earthquake/earthQuakeDataDec6sample2.atom";
+        // String source = "SoftwereDesign/data/Earthquake/earthquakeDataSampleSix1.atom";
+        String source = "SoftwereDesign/data/Earthquake/earthQuakeDataDec6sample2.atom";
         ArrayList<QuakeEntry> list = parser.read(source);
 
         System.out.println("read data for " + list.size() + " quakes");

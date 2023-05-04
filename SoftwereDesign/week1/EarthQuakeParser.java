@@ -26,7 +26,7 @@ public class EarthQuakeParser {
         // String source = "data/2.5_week.atom";
         // String source =
         // "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.atom";
-        String source = "data/Earthquake/nov20quakedatasmall.atom";
+        String source = "SoftwereDesign/data/Earthquake/nov20quakedatasmall.atom";
         ArrayList<QuakeEntry> list = xp.read(source);
         Collections.sort(list);
         for (QuakeEntry loc : list) {

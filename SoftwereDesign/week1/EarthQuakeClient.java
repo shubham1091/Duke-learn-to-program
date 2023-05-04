@@ -15,7 +15,7 @@ public class EarthQuakeClient {
     public void bigQuakes() {
         // String source =
         // "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.atom";
-        String source = "data/EarthQuake/nov20quakedatasmall.atom";
+        String source = "SoftwereDesign/data/EarthQuake/nov20quakedatasmall.atom";
         double mag = 5.0;
 
         EarthQuakeParser parser = new EarthQuakeParser();
@@ -32,8 +32,8 @@ public class EarthQuakeClient {
      * the specified range.
      */
     public void quakesOfDepth() {
-        // String source = "data/EarthQuake/nov20quakedatasmall.atom";
-        String source = "data/EarthQuake/nov20quakedata.atom";
+        // String source = "SoftwereDesign/data/EarthQuake/nov20quakedatasmall.atom";
+        String source = "SoftwereDesign/data/EarthQuake/nov20quakedata.atom";
         double minDepth = -4000.0;
         double maxDepth = -2000.0;
 
@@ -55,8 +55,8 @@ public class EarthQuakeClient {
      * and location.
      */
     public void quakesByPhrase() {
-        // String source = "data/EarthQuake/nov20quakedatasmall.atom";
-        String source = "data/EarthQuake/nov20quakedata.atom";
+        // String source = "SoftwereDesign/data/EarthQuake/nov20quakedatasmall.atom";
+        String source = "SoftwereDesign/data/EarthQuake/nov20quakedata.atom";
         String phrase = "Can";
         String where = "any";
 
@@ -132,7 +132,7 @@ public class EarthQuakeClient {
     public void closeToMe() {
         // String source =
         // "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.atom";
-        String source = "data/EarthQuake/nov20quakedatasmall.atom";
+        String source = "SoftwereDesign/data/EarthQuake/nov20quakedatasmall.atom";
         // Bridgeport, CA
         Location city = new Location(38.17, -118.82);
 
@@ -184,7 +184,7 @@ public class EarthQuakeClient {
      * Reads in quake data from a file and outputs it in CSV format.
      */
     public void createCSV() {
-        String source = "data/EarthQuake/nov20quakedatasmall.atom";
+        String source = "SoftwereDesign/data/EarthQuake/nov20quakedatasmall.atom";
         // String source =
         // "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.atom";
 

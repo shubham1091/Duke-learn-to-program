@@ -36,8 +36,8 @@ public class CaesarBreaker {
     }
 
     public static void test_decryptTwoKeys() {
-        // FileResource resource = new FileResource("data\\Breaking_cipher\\mysteryTwoKeysPractice.txt");
-        FileResource resource = new FileResource("data\\Breaking_cipher\\mysteryTwoKeysQuiz.txt");
+        // FileResource resource = new FileResource("StructuredData/data/Breaking_cipher/mysteryTwoKeysPractice.txt");
+        FileResource resource = new FileResource("StructuredData/data/Breaking_cipher/mysteryTwoKeysQuiz.txt");
         // FileResource resource = new FileResource("data\\Breaking_cipher\\wordsLotsOfEs.txt");
         String message = resource.asString();
         // String message = "Akag tjw Xibhr awoa aoee xakex znxag xwko";
@@ -82,8 +82,8 @@ public class CaesarBreaker {
     }
 
     public static void test_countLetters() {
-        FileResource resource = new FileResource("data\\common_words\\romeo.txt");
-        // FileResource resource = new FileResource("data\\Breaking_cipher\\wordsLotsOfEs.txt");
+        FileResource resource = new FileResource("StructuredData/data/common_words/romeo.txt");
+        // FileResource resource = new FileResource("StructuredData/data/Breaking_cipher/wordsLotsOfEs.txt");
         String message = resource.asString();
 
         int[] counts = countLetters(message);
@@ -91,8 +91,8 @@ public class CaesarBreaker {
     }
 
     public static void test_decrypt() {
-        FileResource resource = new FileResource("data\\Breaking_cipher\\smallHamlet.txt");
-        // FileResource resource = new FileResource("data\\Breaking_cipher\\wordsLotsOfEs.txt");
+        FileResource resource = new FileResource("StructuredData/data/Breaking_cipher/smallHamlet.txt");
+        // FileResource resource = new FileResource("StructuredData/data/Breaking_cipher/wordsLotsOfEs.txt");
         String message = resource.asString();
 
         String encrypted = CaesarCipher.encrypt(message, 20);
@@ -109,8 +109,8 @@ public class CaesarBreaker {
     }
 
     public static void test_halfOfString() {
-        FileResource resource = new FileResource("data\\Breaking_cipher\\smallHamlet.txt");
-        // FileResource resource = new FileResource("data\\Breaking_cipher\\wordsLotsOfEs.txt");
+        FileResource resource = new FileResource("StructuredData/data/Breaking_cipher/smallHamlet.txt");
+        // FileResource resource = new FileResource("StructuredData/data/Breaking_cipher/wordsLotsOfEs.txt");
         String message = resource.asString();
         System.out.println(message);
         // System.out.println(halfOfString(message, 0));
@@ -134,7 +134,7 @@ public class CaesarBreaker {
 
     public static void test_getKey() {
         // FileResource resource = new FileResource("data/smallHamlet.txt");
-        FileResource resource = new FileResource("data\\Breaking_cipher\\wordsLotsOfEs.txt");
+        FileResource resource = new FileResource("StructuredData/data/Breaking_cipher/wordsLotsOfEs.txt");
         String message = resource.asString();
         String e_message = CaesarCipher.encrypt(message, 5);
         System.out.println(getKey(e_message) + " is the key for: " + message + " to: " + e_message);

@@ -44,7 +44,7 @@ public class TestCaesarCipher {
     }
 
     public static void simpleTests() {
-        FileResource resource = new FileResource("data\\Breaking_cipher\\smallHamlet.txt");
+        FileResource resource = new FileResource("StructuredData/data/Breaking_cipher/smallHamlet.txt");
         String message = resource.asString();
         CaesarCipher2 cc2 = new CaesarCipher2(18);
         String encrypted = cc2.encrypt(message);

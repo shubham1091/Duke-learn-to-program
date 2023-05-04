@@ -75,7 +75,7 @@ public class BabyBirths {
     public static int getRank(int year, String name, String gender) {
         // FileResource fr = new FileResource();
         FileResource fr = new FileResource(
-                "data\\us_babynames\\us_babynames_test\\yob" + String.valueOf(year) + "short.csv");
+                "SolvingProblems/data/us_babynames/us_babynames_test/yob" + String.valueOf(year) + "short.csv");
         int pivot = 0;
         boolean flag = false;
         for (CSVRecord rec : fr.getCSVParser(false)) {
@@ -97,7 +97,7 @@ public class BabyBirths {
 
         // get the file
         FileResource fr = new FileResource(
-                "data\\us_babynames\\us_babynames_test\\yob" + String.valueOf(year) + "short.csv");
+                "SolvingProblems/data/us_babynames/us_babynames_test/yob" + String.valueOf(year) + "short.csv");
 
         int pivot = 0;
         boolean flag = false;
@@ -218,7 +218,7 @@ public class BabyBirths {
 
     public static int getTotalBirthsRankedHigher(int year, String name, String gender) {
         FileResource fr = new FileResource(
-                "data\\us_babynames\\us_babynames_test\\yob" + String.valueOf(year) + "short.csv");
+                "SolvingProblems/data/us_babynames/us_babynames_test/yob" + String.valueOf(year) + "short.csv");
 
         int sum = 0;
         for (CSVRecord record : fr.getCSVParser(false)) {

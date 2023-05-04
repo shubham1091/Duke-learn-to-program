@@ -25,7 +25,7 @@ public class VigenereBreaker {
         String[] languageNames = { "Danish", "Dutch", "English", "French", "German", "Italian", "Portuguese",
                 "Spanish" };
         for (String languageName : languageNames) {
-            FileResource dictionaryResource = new FileResource("data/vigenere/dictionaries/" + languageName);
+            FileResource dictionaryResource = new FileResource("StructuredData/data/vigenere/dictionaries/" + languageName);
             HashSet<String> dictionary = readDictionary(dictionaryResource);
             languages.put(languageName, dictionary);
             System.out.println("Finished reading " + languageName + " dictionary.");
@@ -141,7 +141,7 @@ public class VigenereBreaker {
         FileResource fr = new FileResource();
         String encrypted = fr.asString();
 
-        FileResource dictFile = new FileResource("data/vigenere/dictionaries/English");
+        FileResource dictFile = new FileResource("StructuredData/data/vigenere/dictionaries/English");
         HashSet<String> dictionary = readDictionary(dictFile);
 
         int[] key = tryKeyLength(encrypted, 38, 'e');

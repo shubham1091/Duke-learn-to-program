@@ -64,7 +64,7 @@ public class QuakeSortWithTwoArrayLists {
      */
     public void testSort() {
         EarthQuakeParser parser = new EarthQuakeParser();
-        String source = "data/Earthquake/nov20quakedatasmall.atom";
+        String source = "SoftwereDesign/data/Earthquake/nov20quakedatasmall.atom";
         // String source = "data/Earthquake/nov20quakedata.atom";
         ArrayList<QuakeEntry> list = parser.read(source);
 

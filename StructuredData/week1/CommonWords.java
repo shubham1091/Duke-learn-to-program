@@ -13,7 +13,7 @@ public class CommonWords {
         String[] common = getCommon();
         int[] counts = new int[common.length];
         for (int i = 0; i < plays.length; i++) {
-            FileResource resource = new FileResource("data\\common_words\\" + plays[i]);
+            FileResource resource = new FileResource("StructuredData/data/common_words/" + plays[i]);
             countWords(resource, common, counts);
             System.out.println("done with " + plays[i]);
         }
@@ -23,7 +23,7 @@ public class CommonWords {
     }
 
     public static String[] getCommon() {
-        FileResource resource = new FileResource("data\\common_words\\common.txt");
+        FileResource resource = new FileResource("StructuredData/data/common_words/common.txt");
         String[] common = new String[20];
         int index = 0;
         for (String s : resource.words()) {

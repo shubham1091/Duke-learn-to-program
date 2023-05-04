@@ -14,7 +14,7 @@ public class GladLib {
 
     // private static String dataSourceURL =
     // "http://dukelearntoprogram.com/course3/data";
-    private static String dataSourceDirectory = "data\\GladLib";
+    private static String dataSourceDirectory = "StructuredData/data/GladLib";
 
     public static void main(String[] args) {
         GladLib gb = new GladLib();
@@ -120,7 +120,7 @@ public class GladLib {
         usedWords = new ArrayList<String>();
         usedWords.clear();
         System.out.println();
-        String story = fromTemplate("data\\GladLib\\madtemplate.txt");
+        String story = fromTemplate("StructuredData/data/GladLib/madtemplate.txt");
         printOut(story, 60);
     }
 

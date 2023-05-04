@@ -45,7 +45,7 @@ public class DifferentSorters {
      */
     public void sortWithCompareTo() {
         EarthQuakeParser parser = new EarthQuakeParser();
-        String source = "data/Earthquake/earthQuakeDataWeekDec6sample2.atom";
+        String source = "SoftwereDesign/data/Earthquake/earthQuakeDataWeekDec6sample2.atom";
 
         ArrayList<QuakeEntry> list = parser.read(source);
         Collections.sort(list);
@@ -63,7 +63,7 @@ public class DifferentSorters {
      */
     public void sortByMagnitude() {
         EarthQuakeParser parser = new EarthQuakeParser();
-        String source = "data/Earthquake/nov20quakedata.atom";
+        String source = "SoftwereDesign/data/Earthquake/nov20quakedata.atom";
 
         ArrayList<QuakeEntry> list = parser.read(source);
         Collections.sort(list, new MagnitudeComparator());
@@ -81,7 +81,7 @@ public class DifferentSorters {
      */
     public void sortByDistance() {
         EarthQuakeParser parser = new EarthQuakeParser();
-        String source = "data/Earthquake/nov20quakedata.atom";
+        String source = "SoftwereDesign/data/Earthquake/nov20quakedata.atom";
         
         ArrayList<QuakeEntry> list = parser.read(source);
         // Location is Durham, NC
@@ -102,7 +102,7 @@ public class DifferentSorters {
      */
     public void sortByTitleAndDepth() {
         EarthQuakeParser parser = new EarthQuakeParser();
-        String source = "data/Earthquake/earthQuakeDataWeekDec6sample1.atom";
+        String source = "SoftwereDesign/data/Earthquake/earthQuakeDataWeekDec6sample1.atom";
         ArrayList<QuakeEntry> list = parser.read(source);
         Collections.sort(list, new TitleAndDepthComparator());
         int quakeNumber = 500;
@@ -119,7 +119,7 @@ public class DifferentSorters {
      */
     public void sortByLastWordInTitleThenByMagnitude() {
         EarthQuakeParser parser = new EarthQuakeParser();
-        String source = "data/Earthquake/earthQuakeDataWeekDec6sample1.atom";
+        String source = "SoftwereDesign/data/Earthquake/earthQuakeDataWeekDec6sample1.atom";
         ArrayList<QuakeEntry> list = parser.read(source);
         Collections.sort(list, new TitleLastAndMagnitudeComparator());
         int quakeNumber = 500;
